@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AICM Marketplace</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img
+          src="https://aicm.store/static/media/logo.f2eb6ec924733791bff83bc0cacb947a.svg"
+          alt="AICM Logo"
+        />
+      </div>
+
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="nav-links">
+        <a href="#">Create a store</a>
+        <a href="#">About</a>
+        <div class="dropdown">
+          <a
+            href="#"
+            class="dropdown-toggle"
+            aria-haspopup="true"
+            aria-expanded="false"
+            >KnowledgeBase <i class="fa-solid fa-angle-right"></i
+          ></a>
+          <div
+            class="dropdown-menu"
+            role="menu"
+            aria-label="KnowledgeBase submenu"
+          >
+            <a href="#" role="menuitem">Create a store</a>
+            <a href="#" role="menuitem">Advertise</a>
+            <a href="#" role="menuitem">Affiliate program</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="nav-btn">
+        <a href="#" class="visit-btn">Visit store</a>
+      </div>
+    </header>
+
+    <!-- Mobile menu (shown when menu-toggle is active) -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a href="#">Create a store</a>
+      <a href="#">About</a>
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-toggle" aria-expanded="false">
+          KnowledgeBase <i class="fa-solid fa-angle-right"></i>
+        </button>
+        <div class="mobile-dropdown-menu">
+          <a href="#">Create a store</a>
+          <a href="#">Advertise</a>
+          <a href="#">Affiliate program</a>
+        </div>
+      </div>
+      <a href="#" class="visit-btn mobile-visit">Visit store</a>
+    </div>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>
+          The Smarter,<br />
+          AI-Powered<br />
+          Decentralized<br />
+          Marketplace
+        </h1>
+        <p>
+          Harness the power of decentralized AI <br />marketplace with AICM.
+        </p>
+
+        <button class="search-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <circle cx="11" cy="11" r="7" stroke="white" stroke-width="2" />
+            <line
+              x1="20"
+              y1="20"
+              x2="16.5"
+              y2="16.5"
+              stroke="white"
+              stroke-width="2"
+            />
+          </svg>
+          Search with AICM
+        </button>
+      </div>
+
+      <div class="hero-video">
+        <video autoplay muted loop playsinline>
+          <source
+            src="https://aicm.store/static/media/Headervideo.f31b35a8331a4491b12b.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+    </section>
+
+    <script>
+      (function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const mobileDropdownToggle = document.querySelector(
+          ".mobile-dropdown-toggle",
+        );
+        const mobileDropdownMenu = document.querySelector(
+          ".mobile-dropdown-menu",
+        );
+
+        if (menuToggle && mobileMenu) {
+          menuToggle.addEventListener("click", function (e) {
+            const isOpen = mobileMenu.classList.toggle("open");
+            menuToggle.classList.toggle("open");
+            menuToggle.setAttribute("aria-expanded", isOpen);
+            mobileMenu.setAttribute("aria-hidden", !isOpen);
+          });
+        }
+
+        if (mobileDropdownToggle && mobileDropdownMenu) {
+          mobileDropdownToggle.addEventListener("click", function (e) {
+            const expanded =
+              mobileDropdownToggle.getAttribute("aria-expanded") === "true";
+            mobileDropdownToggle.setAttribute(
+              "aria-expanded",
+              String(!expanded),
+            );
+            mobileDropdownMenu.classList.toggle("open");
+            const icon = mobileDropdownToggle.querySelector("i");
+            if (icon) icon.classList.toggle("rotated");
+          });
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener("click", function (e) {
+          if (!mobileMenu || !menuToggle) return;
+          if (
+            !mobileMenu.contains(e.target) &&
+            !menuToggle.contains(e.target) &&
+            mobileMenu.classList.contains("open")
+          ) {
+            mobileMenu.classList.remove("open");
+            menuToggle.classList.remove("open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            mobileMenu.setAttribute("aria-hidden", "true");
+          }
+        });
+      })();
+    </script>
+
+    <section class="Categories"></section>
+  </body>
+</html>
