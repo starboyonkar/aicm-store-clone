@@ -130,7 +130,7 @@ body {
 
 .visit-btn:hover {
     transform: translateY(-2px);
-    background-color: #b140a6;
+    background-color: rgba(177,64,166,0.1);
     color: white;
 }
 
