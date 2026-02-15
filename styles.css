@@ -338,14 +338,14 @@ body {
     font-size: 64px;
     font-weight: 700;
     color: #0b1234;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
 }
 
 .section-subtitle {
     font-size: 18px;
     color: #8c8fa3;
     max-width: 820px;
-    margin: 0 auto 70px;
+    margin: 0 auto 40px;
     line-height: 1.6;
 }
 
@@ -416,3 +416,109 @@ body {
         font-size: 48px;
     }
 }
+
+/* SECTION 3 - LISTED PROJECTS */
+
+.projects-section {
+    background: #ffffff;
+    padding: 120px 0;
+    font-family: "Inter", sans-serif;
+    overflow: hidden;
+}
+
+.projects-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.projects-heading {
+    font-size: 60px;
+    font-weight: 600;
+    color: #0b1234;
+    margin-bottom: 80px;
+}
+
+/* Row animation wrapper */
+.projects-row {
+    display: flex;
+    gap: 40px;
+    width: max-content;
+    animation: stepSlide 3s ease-in-out infinite;
+}
+
+/* Individual card */
+.project-card {
+    min-width: 260px;
+    background: #f4f6f9;
+    border-radius: 28px;
+    padding: 40px 30px;
+    text-align: left;
+    border: 2px solid #d9e6f3;
+
+}
+
+.project-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 30px;
+    border-radius: 12px;
+}
+
+.project-category {
+    font-size: 16px;
+    color: #8b8f9e;
+    margin-bottom: 8px;
+}
+
+.project-title {
+    font-size: 26px;
+    font-weight: 600;
+    color: #111;
+}
+
+/* Controls */
+.projects-controls {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.arrow-btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 22px;
+    border: 2px solid #d9e6f3;
+    background: #f4f6f9;
+    font-size: 28px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.arrow-btn:hover {
+    background: #eaf1f8;
+}
+
+/* LOOP ANIMATION */
+@keyframes stepSlide {
+
+    /* Show first 3 cards */
+    0%   { transform: translateX(0); }
+    25%  { transform: translateX(0); }
+
+    /* Move next 3 cards */
+    35%  { transform: translateX(-1020px); }
+    60%  { transform: translateX(-1020px); }
+
+    /* Move next set */
+    70%  { transform: translateX(-2040px); }
+    95%  { transform: translateX(-2040px); }
+
+    /* Reset */
+    100% { transform: translateX(0); }
+}
+
+
