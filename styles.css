@@ -695,5 +695,138 @@ gap: 30px;}
 
 }
 
+/* SECTION 6 - TOKEN UTILITY */
+
+.utility-section {
+    background: #ffffff;
+    padding: 80px 20px;
+    font-family: "Inter", sans-serif;
+}
+
+.utility-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+/* LEFT SIDE */
+
+.utility-left {
+    flex: 1;
+    max-width: 600px;
+}
+
+.wallet-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #f2f4f7;
+    padding: 12px 18px;
+    border-radius: 14px;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.wallet-badge img {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.utility-left h4 {
+    font-size: 64px;
+    font-weight: 600;
+    color: rgb(3, 9, 48);
+    margin-bottom: 25px;
+}
+
+.utility-desc {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #6b7280;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* GRID */
+
+.utility-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.utility-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 22px;
+    border-radius: 18px;
+    border: 2px solid #dbe7f5;
+    background: #f4f8fc;
+    transition: all 0.3s ease;
+}
+
+.utility-card img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.utility-card p {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(3, 9, 48);
+    margin: 0;
+}
+
+.utility-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* RIGHT SIDE */
+
+.utility-right {
+    flex: 1;
+    text-align: center;
+}
+
+.utility-right img {
+    width: 100%;
+    max-width: 520px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+
+    .utility-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .utility-left {
+        max-width: 100%;
+    }
+
+    .utility-left h4 {
+        font-size: 42px;
+    }
+
+    .utility-desc {
+        font-size: 16px;
+    }
+
+    .utility-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
 
 
