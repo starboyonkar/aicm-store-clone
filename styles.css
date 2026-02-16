@@ -609,4 +609,91 @@ body {
 
 }
 
+/*  SECTION 5 - AICM AUDITS  */
+
+.audit-section {
+    background: #ffffff;
+    padding: 80px 20px;
+    font-family: "Inter", sans-serif;
+}
+
+.audit-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #f3f3f3 50%, #e9edf3 50%);
+    padding: 60px 70px;
+    gap: 40px;
+}
+
+/* Left Side */
+.audit-left {
+    flex: 1;
+    max-width: 520px;
+}
+
+.audit-left h4 {
+    font-size: 52px;
+    font-weight: 600;
+    color: rgb(3, 9, 48);
+    margin-bottom: 30px;
+}
+
+.audit-left p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #13192f;
+    font-weight: 700;
+}
+
+/* Right Side */
+.audit-right img {
+display: flex;
+flex-direction: column; 
+align-content: center;
+gap: 30px;}
+
+.solidproof-logo {
+    width: 280px;
+    max-width: 100%;
+    margin-right: 100px;
+    margin-bottom: 30px;
+}
+
+.kyc-badge {
+    width: 180px;
+    max-width: 100%;
+    margin-right: 30px;
+
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+
+    .audit-container {
+        flex-direction: column;
+        text-align: center;
+        background: #f3f3f3;
+        padding: 50px 30px;
+    }
+
+    .audit-left {
+        max-width: 100%;
+    }
+
+    .audit-left h4 {
+        font-size: 38px;
+    }
+
+    .audit-left p {
+        font-size: 16px;
+    }
+
+}
+
+
 
